@@ -1,11 +1,8 @@
 import React from "react";
-import { graphql } from "gatsby";
 import Helmet from "react-helmet";
-import Layout from "components/layout";
-import Hero from "sections/hero";
-import About from "sections/about";
-import Portfolio from "sections/portfolio";
-import Contact from "sections/contact";
+import { graphql } from "gatsby";
+import { Layout } from "../components";
+import { Hero, About, Portfolio, Contact } from "../sections";
 
 class Index extends React.Component {
 	render() {
