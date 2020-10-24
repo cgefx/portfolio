@@ -1,10 +1,9 @@
 import React from "react";
-import { Row, Col, Container } from "react-bootstrap";
 import styled, { keyframes } from "styled-components";
-import RevealContent from "components/reveal-content";
+import { Row, Col, Container } from "react-bootstrap";
+import { RevealContent, AnimationContainer } from "../../components";
 import { StaticQuery, graphql } from "gatsby";
-import AnimationContainer from "components/animation-container";
-import TabsPart from "sections/about/parts/TabsPart";
+import TabsPart from "./parts/TabsPart";
 
 class About extends React.Component {
 	shouldComponentUpdate() {

@@ -1,9 +1,9 @@
 import React from "react";
-import { Row, Col, Container } from "react-bootstrap";
 import { graphql, StaticQuery } from "gatsby";
 import styled, { keyframes } from "styled-components";
-import AnimationContainer from "components/animation-container";
-import ContactForm from "./parts/ContactForm.js";
+import { Row, Col, Container } from "react-bootstrap";
+import { AnimationContainer } from "../../components";
+import ContactForm from "./parts/ContactForm";
 
 class Contact extends React.Component {
 	render() {

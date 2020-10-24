@@ -1,8 +1,8 @@
 import React from "react";
-import { StaticQuery, graphql } from "gatsby";
 import styled, { keyframes } from "styled-components";
+import { StaticQuery, graphql } from "gatsby";
 import Typewriter from "typewriter-effect";
-import Glitch from "components/glitch";
+import { Glitch } from "../../components";
 
 class Hero extends React.Component {
 	constructor(props) {

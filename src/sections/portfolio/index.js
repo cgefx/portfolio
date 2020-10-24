@@ -1,13 +1,12 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
-import { Col, Container } from "react-bootstrap";
-import styled from "styled-components";
-import PortfolioItem from "sections/portfolio/parts/PortfolioItem.js";
 import Slider from "react-slick";
+import styled from "styled-components";
+import { Col, Container } from "react-bootstrap";
+import PortfolioItem from "./parts/PortfolioItem";
+import { AnimatedHeading, AnimationContainer } from "../../components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import AnimatedHeading from "components/animated-heading";
-import AnimationContainer from "components/animation-container";
 
 class Portfolio extends React.Component {
 	render() {
