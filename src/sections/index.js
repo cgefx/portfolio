@@ -1,6 +1,6 @@
-import Hero from "../sections/hero";
-import About from "../sections/about";
-import Portfolio from "../sections/portfolio";
-import Contact from "../sections/contact";
+import Hero from "./Hero";
+import About from "./About";
+import Portfolio from "./Portfolio";
+import Contact from "./Contact";
 
 export { Hero, About, Portfolio, Contact };

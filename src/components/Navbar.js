@@ -5,6 +5,83 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 var scrollToElement = require("scroll-to-element");
 
+const NavbarWrapper = styled.div`
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	padding: 20px 0;
+	z-index: 100;
+	&.sticky {
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.8);
+		padding: 0 0;
+		@media (max-width: 500px) {
+			padding: 20px 0;
+		}
+	}
+`;
+
+const NavbarContainer = styled(Container)`
+	display: flex;
+	position: relative;
+	@media (max-width: 500px) {
+		display: block;
+		padding: 0;
+	}
+`;
+
+const Nav = styled.nav`
+	flex: 0 0 80%;
+	max-width: 80%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	@media (max-width: 500px) {
+		flex: 0 0 100%;
+		max-width: 100%;
+		justify-content: center;
+		background-color: rgba(0, 0, 0, 0.8);
+		margin-top: 20px;
+		&.hidden_mobile {
+			display: none;
+		}
+	}
+`;
+
+const LogoWrapper = styled.div`
+	flex: 0 0 20%;
+	max-width: 20%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	@media (max-width: 500px) {
+		flex: 0 0 100%;
+		max-width: 100%;
+		justify-content: center;
+	}
+`;
+
+const Logo = styled.h4`
+	height: 40px;
+	@media (max-width: 1023px) {
+		height: 30px;
+	}
+`;
+
+const NavInner = styled.div`
+	justify-content: flex-end;
+`;
+
+const Toggler = styled.button`
+	color: #fff;
+	position: absolute;
+	right: 0;
+	top: 0;
+	@media (min-width: 500px) {
+		display: none;
+	}
+`;
+
 class Navbar extends React.Component {
 	constructor(props) {
 		super(props);
@@ -54,90 +131,13 @@ class Navbar extends React.Component {
 	}
 
 	render() {
-		const NavbarWrapper = styled.div`
-			position: absolute;
-			z-index: 1;
-			width: 100%;
-			padding: 20px 0;
-			z-index: 100;
-			&.sticky {
-				position: fixed;
-				background-color: rgba(0, 0, 0, 0.8);
-				padding: 0 0;
-				@media (max-width: 500px) {
-					padding: 20px 0;
-				}
-			}
-		`;
-
-		const NavbarContainer = styled(Container)`
-			display: flex;
-			position: relative;
-			@media (max-width: 500px) {
-				display: block;
-				padding: 0;
-			}
-		`;
-
-		const Nav = styled.nav`
-			flex: 0 0 80%;
-			max-width: 80%;
-			display: flex;
-			justify-content: flex-end;
-			align-items: center;
-			@media (max-width: 500px) {
-				flex: 0 0 100%;
-				max-width: 100%;
-				justify-content: center;
-				background-color: rgba(0, 0, 0, 0.8);
-				margin-top: 20px;
-				&.hidden_mobile {
-					display: none;
-				}
-			}
-		`;
-
-		const LogoWrapper = styled.div`
-			flex: 0 0 20%;
-			max-width: 20%;
-			display: flex;
-			justify-content: flex-start;
-			align-items: center;
-			@media (max-width: 500px) {
-				flex: 0 0 100%;
-				max-width: 100%;
-				justify-content: center;
-			}
-		`;
-
-		const Logo = styled.img`
-			height: 40px;
-			@media (max-width: 1023px) {
-				height: 30px;
-			}
-		`;
-
-		const NavInner = styled.div`
-			justify-content: flex-end;
-		`;
-
-		const Toggler = styled.button`
-			color: #fff;
-			position: absolute;
-			right: 0;
-			top: 0;
-			@media (min-width: 500px) {
-				display: none;
-			}
-		`;
-
 		return (
 			<NavbarWrapper
 				className={`header${this.state.sticky === true ? " sticky" : ""}`}
 			>
 				<NavbarContainer>
 					<LogoWrapper className="logo">
-						<Logo src="/img/logo.png" alt="logo" />
+						<Logo>gibson.codes</Logo>
 					</LogoWrapper>
 					<Toggler
 						onClick={() => this.collapseNav()}
