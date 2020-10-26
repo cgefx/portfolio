@@ -1,8 +1,8 @@
 import React from "react";
 import Tilt from "react-tilt";
 import styled, { keyframes } from "styled-components";
-import { RevealContent } from "../../../components";
-import DesktopContent from "./DesktopContent.js";
+import { RevealContent } from ".";
+import DesktopContent from "./PortfolioItemDesktop.js";
 
 class PortfolioItem extends React.Component {
 	constructor(props) {

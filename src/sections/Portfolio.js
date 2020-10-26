@@ -3,8 +3,11 @@ import { StaticQuery, graphql } from "gatsby";
 import Slider from "react-slick";
 import styled from "styled-components";
 import { Col, Container } from "react-bootstrap";
-import PortfolioItem from "./parts/PortfolioItem";
-import { AnimatedHeading, AnimationContainer } from "../../components";
+import {
+	AnimatedHeading,
+	AnimationContainer,
+	PortfolioItem
+} from "../components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -15,18 +18,18 @@ class Portfolio extends React.Component {
 			padding: 100px 0;
 		`;
 		const PortfolioContainer = styled.div`
-            .slick-slide {
-              display: block;
-              margin: 0px 0 70px 0px;
-            }
-            .slick-dots {
-              bottom: 0;
-              li button:before,.slick-dots li.slick-active button:before {
-                color: #04e5e5;
-              }
-            }
-          }
-        `;
+			.slick-slide {
+				display: block;
+				margin: 0px 0 70px 0px;
+			}
+			.slick-dots {
+				bottom: 0;
+				li button:before,
+				.slick-dots li.slick-active button:before {
+					color: #04e5e5;
+				}
+			}
+		`;
 
 		const settings = {
 			dots: true,

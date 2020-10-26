@@ -2,7 +2,7 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import { StaticQuery, graphql } from "gatsby";
 import Typewriter from "typewriter-effect";
-import { Glitch } from "../../components";
+import { Glitch } from "../components";
 
 class Hero extends React.Component {
 	constructor(props) {
@@ -64,7 +64,7 @@ class Hero extends React.Component {
 
 		const Heading = styled.div`
 			.glitch {
-				font-size: 140px;
+				font-size: 125px;
 				line-height: 140px;
 				font-weight: 600;
 				color: #fff;
@@ -187,7 +187,7 @@ class Hero extends React.Component {
 					<HeadingBox className="parallax-hero-item animate">
 						<SubHeading className="parallax-hero-item">Hello, I'm</SubHeading>
 						<Heading className="parallax-hero-item">
-							<Glitch text="John Doe" />
+							<Glitch text="Colin Gibson" />
 						</Heading>
 						<Type className="parallax-hero-item">
 							<Typewriter

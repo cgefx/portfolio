@@ -1,5 +1,5 @@
 import React from "react";
-import "../scss/styles.scss";
+import "./styles/glitch.scss";
 //Styled Component does not support @for loops
 
 class Glitch extends React.Component {
