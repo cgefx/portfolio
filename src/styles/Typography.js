@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+// originally from 404 page
 export const Heading1 = styled.h1`
 	font-size: 80px;
 	font-family: Teko;
@@ -23,6 +24,7 @@ export const Heading1 = styled.h1`
 	}
 `;
 
+// originally from 404 page
 export const Heading2 = styled.h2`
 	font-size: 120px;
 	color: #fff;
@@ -42,4 +44,12 @@ export const Heading2 = styled.h2`
 	@media (min-width: 768px) and (max-width: 1500px) {
 		font-size: 70px;
 	}
+`;
+
+export const SubHeading = styled.h2`
+	font-size: 18px;
+	font-weight: 300;
+	color: #ccc;
+	text-transform: uppercase;
+	letter-spacing: 4px;
 `;
