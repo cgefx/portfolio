@@ -1,9 +1,9 @@
 import React from "react";
+import GlobalStyles from "../styles/GlobalStyles";
 import PageRevealer from "./PageRevealer";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../scss/abstract.scss";
 
 class Layout extends React.Component {
 	componentDidUpdate() {
@@ -14,15 +14,16 @@ class Layout extends React.Component {
 		const { children } = this.props;
 
 		return (
-			<div id="main">
+			<>
+				<GlobalStyles />
 				<Navbar
 					scroll={this.props.isHome ? true : false}
 					sections={this.props.sections}
 				/>
-				{/* <PageRevealer /> */}
+				<PageRevealer />
 				<div>{children}</div>
 				<Footer />
-			</div>
+			</>
 		);
 	}
 }
