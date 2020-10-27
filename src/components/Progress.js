@@ -14,12 +14,6 @@ const Text = styled.span`
 	color: #fff;
 `;
 
-const Value = styled.span`
-	font-size: 17px;
-	font-family: Poppins;
-	color: #fff;
-	float: right;
-`;
 const ColorAnimation = keyframes`
 			0%  {background: #04e5e5;}
 			10% {background: #f37055;}
