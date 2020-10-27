@@ -3,6 +3,10 @@ import styled, { keyframes } from "styled-components";
 
 const ProgressContainer = styled.div`
 	margin-bottom: 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 `;
 const Text = styled.span`
 	font-size: 17px;
@@ -31,19 +35,19 @@ const ColorAnimation = keyframes`
 	`;
 
 const Progress = styled.div`
-	height: 5px;
+	height: 10px;
+	width: 40px;
 	border-radius: 2.5px;
-	margin-top: 10px;
 	transition: 2s;
 	animation: ${ColorAnimation} 10s infinite alternate;
 `;
 
-export default function ProgressBar({ text, value }) {
+export default function ProgressBar({ text }) {
 	return (
 		<ProgressContainer>
 			<Text>{text}</Text>
-			<Value>{value}%</Value>
-			<Progress style={{ width: `${value}%` }}></Progress>
+
+			<Progress></Progress>
 		</ProgressContainer>
 	);
 }
