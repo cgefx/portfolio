@@ -1,40 +1,22 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Slider from "react-slick";
-import styled from "styled-components";
 import { Col, Container } from "react-bootstrap";
 import {
 	AnimatedHeading,
 	AnimationContainer,
 	PortfolioItem
 } from "../components";
+import { Section, PortfolioContainer } from "../styles/PortfolioStyles";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-const Section = styled.section`
-	background-color: #050505;
-	padding: 100px 0;
-`;
-const PortfolioContainer = styled.div`
-	.slick-slide {
-		display: block;
-		margin: 0px 0 70px 0px;
-	}
-	.slick-dots {
-		bottom: 0;
-		li button:before,
-		.slick-dots li.slick-active button:before {
-			color: #04e5e5;
-		}
-	}
-`;
 
 const settings = {
 	dots: true,
 	swipe: true,
 	infinite: true,
 	speed: 500,
-	slidesToShow: 4,
+	slidesToShow: 3,
 	slidesToScroll: 2,
 	arrows: false,
 	autoplay: true,
