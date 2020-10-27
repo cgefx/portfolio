@@ -38,18 +38,12 @@ const Progress = styled.div`
 	animation: ${ColorAnimation} 10s infinite alternate;
 `;
 
-class ProgressBar extends React.Component {
-	render() {
-		const { text } = this.props;
-
-		return (
-			<ProgressContainer>
-				<Text>{text}</Text>
-				<Value>{this.props.value}%</Value>
-				<Progress style={{ width: `${this.props.value}%` }}></Progress>
-			</ProgressContainer>
-		);
-	}
+export default function ProgressBar({ text, value }) {
+	return (
+		<ProgressContainer>
+			<Text>{text}</Text>
+			<Value>{value}%</Value>
+			<Progress style={{ width: `${value}%` }}></Progress>
+		</ProgressContainer>
+	);
 }
-
-export default ProgressBar;

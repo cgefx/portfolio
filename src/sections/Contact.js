@@ -1,5 +1,4 @@
 import React from "react";
-import { graphql, StaticQuery } from "gatsby";
 import styled, { keyframes } from "styled-components";
 import { Row, Col, Container } from "react-bootstrap";
 import { AnimationContainer, ContactForm } from "../components";
@@ -67,59 +66,19 @@ const Gradient = styled.div`
 	animation: ${gradientAnimation} 5s ease-in-out infinite;
 `;
 
-class Contact extends React.Component {
-	render() {
-		return (
-			<Section id="contact">
-				<Container>
-					<AnimationContainer animation="fadeIn">
-						<FormRow>
-							<ContactCol md={12}>
-								<ContactForm />
-								<Gradient />
-							</ContactCol>
-						</FormRow>
-					</AnimationContainer>
-				</Container>
-			</Section>
-		);
-	}
+export default function Contact() {
+	return (
+		<Section id="contact">
+			<Container>
+				<AnimationContainer animation="fadeIn">
+					<FormRow>
+						<ContactCol md={12}>
+							<ContactForm />
+							<Gradient />
+						</ContactCol>
+					</FormRow>
+				</AnimationContainer>
+			</Container>
+		</Section>
+	);
 }
-
-export default (props) => (
-	<StaticQuery
-		query={graphql`
-			query {
-				emailIcon: file(relativePath: { eq: "icons/email2.png" }) {
-					childImageSharp {
-						fluid(maxWidth: 500) {
-							src
-						}
-					}
-				}
-				mapIcon: file(relativePath: { eq: "icons/map.png" }) {
-					childImageSharp {
-						fluid(maxWidth: 500) {
-							src
-						}
-					}
-				}
-				phoneIcon: file(relativePath: { eq: "icons/phone.png" }) {
-					childImageSharp {
-						fluid(maxWidth: 500) {
-							src
-						}
-					}
-				}
-			}
-		`}
-		render={({ emailIcon, mapIcon, phoneIcon }) => (
-			<Contact
-				emailIcon={emailIcon}
-				mapIcon={mapIcon}
-				phoneIcon={phoneIcon}
-				{...props}
-			/>
-		)}
-	/>
-);

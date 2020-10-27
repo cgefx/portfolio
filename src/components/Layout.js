@@ -16,16 +16,13 @@ class Layout extends React.Component {
 		return (
 			<>
 				<GlobalStyles />
-
-				<div id="main">
-					<Navbar
-						scroll={this.props.isHome ? true : false}
-						sections={this.props.sections}
-					/>
-					<PageRevealer />
-					<div>{children}</div>
-					<Footer />
-				</div>
+				<Navbar
+					scroll={this.props.isHome ? true : false}
+					sections={this.props.sections}
+				/>
+				<PageRevealer />
+				<div>{children}</div>
+				<Footer />
 			</>
 		);
 	}

@@ -66,53 +66,44 @@ const Tab = styled.div`
 	animation: ${Fade} 1s forwards;
 `;
 
-class Tabs extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			tab: "skills"
-		};
-	}
+export default function Tabs() {
+	const [activeTab, setActiveTab] = React.useState("skills");
 
-	render() {
-		return (
-			<TabContainer>
-				<TabSelectors>
-					<TabSelector
-						className={this.state.tab === "skills" ? "active" : ""}
-						onClick={() => this.setState({ tab: "skills" })}
-					>
-						Skills
-					</TabSelector>
-					<TabSelector
-						className={this.state.tab === "experience" ? "active" : ""}
-						onClick={() => this.setState({ tab: "experience" })}
-					>
-						Experience
-					</TabSelector>
-					<TabSelector
-						className={this.state.tab === "education" ? "active" : ""}
-						onClick={() => this.setState({ tab: "education" })}
-					>
-						Education
-					</TabSelector>
-				</TabSelectors>
-				<StyledTabs>
-					<Tab
-						style={{
-							display: this.state.tab === "skills" ? "block" : "none"
-						}}
-					>
-						<Progress value={90} text="React" />
-						<Progress value={80} text="Angular" />
-						<Progress value={10} text="MongoDB" />
-						<Progress value={100} text="PHP" />
-						<Progress value={80} text="MySQL" />
-					</Tab>
-				</StyledTabs>
-			</TabContainer>
-		);
-	}
+	return (
+		<TabContainer>
+			<TabSelectors>
+				<TabSelector
+					className={activeTab === "skills" ? "active" : ""}
+					onClick={() => setActiveTab("skills")}
+				>
+					Skills
+				</TabSelector>
+				<TabSelector
+					className={activeTab === "experience" ? "active" : ""}
+					onClick={() => setActiveTab("experience")}
+				>
+					Experience
+				</TabSelector>
+				<TabSelector
+					className={activeTab === "education" ? "active" : ""}
+					onClick={() => setActiveTab("education")}
+				>
+					Education
+				</TabSelector>
+			</TabSelectors>
+			<StyledTabs>
+				<Tab
+					style={{
+						display: activeTab === "skills" ? "block" : "none"
+					}}
+				>
+					<Progress value={90} text="React" />
+					<Progress value={80} text="Angular" />
+					<Progress value={10} text="MongoDB" />
+					<Progress value={100} text="PHP" />
+					<Progress value={80} text="MySQL" />
+				</Tab>
+			</StyledTabs>
+		</TabContainer>
+	);
 }
-
-export default Tabs;
