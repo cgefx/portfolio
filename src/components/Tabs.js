@@ -63,6 +63,8 @@ const Fade = keyframes`
 
 const Tab = styled.div`
 	display: none;
+	justify-content: space-between;
+	flex-wrap: wrap;
 	animation: ${Fade} 1s forwards;
 `;
 
@@ -94,9 +96,14 @@ export default function Tabs() {
 			<StyledTabs>
 				<Tab
 					style={{
-						display: activeTab === "skills" ? "block" : "none"
+						display: activeTab === "skills" ? "flex" : "none"
 					}}
 				>
+					<Progress value={90} text="React" />
+					<Progress value={80} text="Angular" />
+					<Progress value={10} text="MongoDB" />
+					<Progress value={100} text="PHP" />
+					<Progress value={80} text="MySQL" />
 					<Progress value={90} text="React" />
 					<Progress value={80} text="Angular" />
 					<Progress value={10} text="MongoDB" />
