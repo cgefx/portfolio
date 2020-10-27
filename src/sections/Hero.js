@@ -192,7 +192,11 @@ class Hero extends React.Component {
 						<Type className="parallax-hero-item">
 							<Typewriter
 								options={{
-									strings: ["App Developer", "Web Designer", "UX Developer"],
+									strings: [
+										"Software Engineer",
+										"Web Designer",
+										"UX Developer"
+									],
 									autoStart: true,
 									loop: true
 								}}
